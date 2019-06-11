@@ -1,0 +1,9 @@
+useDynLib("diffnet") 
+exportPattern("^[[:alpha:]]+")
+
+import("MASS")
+import("Matrix")
+export(diffnet)
+
+S3method("print","diffnet")
+
