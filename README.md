@@ -15,11 +15,20 @@ What things you need to install the software and how to install them. The key fu
     install.packages("Matrix")
 
 ## Install Diffnet
-    library("devtools")
-    devtools::install_github("zhoutang776/Diffnet")
+
+### Install from binary source.
+1. Download the Diffnet and open it with the project mode in the Rstudio.
+2. Main Menu -> Build -> 
+
+### Install from prebuild release.
+1. Download the tar.gz prebuild file in release tag and save in YOUR_ADDRESS.
+2. type the following command in the Rstudio:
+          
+       install.packages("YOUR_ADDRESS")
+    
     
 # Toy example
-
+    library(diffnet)
     rm(list = ls())
     set.seed(123)
     library('MASS')
