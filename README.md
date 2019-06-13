@@ -18,7 +18,7 @@ What things you need to install the software and how to install them. The key fu
 
 ### Install from binary source.
 1. Download the Diffnet and open it with the project mode in the Rstudio.
-2. Main Menu -> Build -> 
+2. Main Menu -> Build -> Install and Restart.
 
 ### Install from prebuild release.
 1. Download the tar.gz prebuild file in release tag and save in YOUR_ADDRESS.
@@ -36,7 +36,7 @@ What things you need to install the software and how to install them. The key fu
     library('Diffnet')
     ## ---------------------------- preprocess -----------------------------------------
     n_X = 100; n_Y = n_X;
-    p_X = 800; p_Y = p_X;
+    p_X = 100; p_Y = p_X;
     nlambda = 50
     tuning = "none"
     case = "case1"
