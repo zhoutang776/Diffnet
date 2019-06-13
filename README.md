@@ -2,7 +2,7 @@
 Differential network is an important tool to capture the changes of conditional correlations under two sample cases. We develop an efficient fista algorithm via the symmetric quadratic loss for differential matrix estimation. The computation complexity of our algorithm is linear in the sample size and the number of parameters, which is optimal in the sense that it is of the same order as computing two sample covariance matrices.
 
 # References
-Zhou Tang ad Zhangsheng and Cheng Wang. "An efficient ADMM algorithm for high dimensional precision matrix estimation via penalized quadratic loss", 2019+. [(arxiv)](https://arxiv.org/abs/1901.07150).
+Zhou Tang and Zhangsheng and Cheng Wang. "An efficient ADMM algorithm for high dimensional precision matrix estimation via penalized quadratic loss", 2019+. [(arxiv)](https://arxiv.org/abs/1901.07150).
 
 # Getting Started
 These instructions will give you a toy example for implementing the package.
