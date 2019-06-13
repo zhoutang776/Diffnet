@@ -18,7 +18,7 @@ What things you need to install the software and how to install them. The key fu
     library("devtools")
     devtools::install_github("zhoutang776/Diffnet")
     
-#Toy example
+# Toy example
 
     rm(list = ls())
     set.seed(123)
