@@ -24,7 +24,7 @@ What things you need to install the software and how to install them. The key fu
 1. Download the tar.gz prebuild file in release tag and save in YOUR_ADDRESS.
 2. type the following command in the Rstudio:
           
-       install.packages("~/YOUR_ADDRESS", repos = NULL, type = "source") 
+       install.packages("YOUR_ADDRESS", repos = NULL, type = "source") 
     
     
 # Toy example
