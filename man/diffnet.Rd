@@ -9,8 +9,8 @@ A Fast Iterative Algorithm for High-dimensional Differential Network
 }
 \usage{
 diffnet = function(X, Y, lambdas=NULL, lambda.min.ratio = NULL, nlambda = NULL, a = NULL,
-                         penalty = c("lasso", "scad", "mcp"), tuning=c("none","aic","bic"),
-                         perturb = FALSE, stop.tol=1e-5, max.iter=500,
+                         method = c("lasso", "scad", "mcp"), tuning=c("none","aic","bic"),
+                         perturb = FALSE, stop.tol=1e-5, max.iter=800,
                          correlation=FALSE, verbose=FALSE, Delta.init = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
@@ -20,7 +20,7 @@ diffnet = function(X, Y, lambdas=NULL, lambda.min.ratio = NULL, nlambda = NULL, 
   \item{lambda}{regularization parameter, which control the sparisty of the solution}
   \item{lambda.min.ratio}{it is the smallest value for lambda, as a fraction of the uppperbound (MAX) of the regularization/thresholding parameter which makes all estimates equal to 0. The program can automatically generate lambda as a sequence of length = nlambda starting from MAX to lambda.min.ratio*MAX in log scale.}
   \item{nlambda}{The number of regularization/thresholding paramters. The default value is 10}
-  \item{penalty}{Graph estimation methods with 3 penalty: "lasso", "mcp" and "scad". The defaulty value is "lasso".}
+  \item{method}{Graph estimation methods with 3 penalty: "lasso", "mcp" and "scad". The defaulty value is "lasso".}
   \item{tuning}{Model selection criterion.}
   \item{perturb}{if perturb=TRUE, then perturb the sample covariance matrix to make it definitive positive}
   \item{stop.tol}{the stop condtion of the algorithm}
@@ -81,7 +81,7 @@ The score of each solution under "aic" or "bic" selection criterion
 %% ~put references to the literature/web site here ~
 }
 \author{
-Zhou Tang, Cheng Wang
+Zhou Tang, Zhangsheng Yu, Cheng Wang
 }
 \note{
 %%  ~~further notes~~
