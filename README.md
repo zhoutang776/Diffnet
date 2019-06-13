@@ -16,15 +16,15 @@ What things you need to install the software and how to install them. The key fu
 
 ## Install Diffnet
 
-### Install from binary source.
+### Install from source.
 1. Download the Diffnet and open it with the project mode in the Rstudio.
 2. Main Menu -> Build -> Install and Restart.
 
-### Install from prebuild release.
+### Install from binary prebuild release .
 1. Download the tar.gz prebuild file in release tag and save in YOUR_ADDRESS.
 2. type the following command in the Rstudio:
           
-       install.packages("YOUR_ADDRESS")
+       install.packages("YOUR_ADDRESS", repos = NULL, type = "source") 
     
     
 # Toy example
