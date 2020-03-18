@@ -33,7 +33,7 @@ What things you need to install the software and how to install them. The key fu
     set.seed(123)
     library('MASS')
     library('Matrix')
-    library('Diffnet')
+    library('diffnet')
     ## ---------------------------- preprocess -----------------------------------------
     n_X = 100; n_Y = n_X;
     p_X = 100; p_Y = p_X;
