@@ -4,6 +4,7 @@ exportPattern("^[[:alpha:]]+")
 import("MASS")
 import("Matrix")
 export(diffnet)
+importFrom("stats", "cor", "cov", "qnorm", "sd")
 
 S3method("print","diffnet")
 
