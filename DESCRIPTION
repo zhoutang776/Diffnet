@@ -1,7 +1,7 @@
 Package: diffnet
 Type: Package
 Title: A Fast Iterative Algorithm for High-dimensional Differential Network 
-Version: 0.1.0
+Version: 0.2.0
 Author: Johntan, Cheng Wang, ZhangSheng Yu
 Maintainer: Johntan <johntan@sjtu.edu.cn>
 Depends: R (>= 3.0.0), MASS, Matrix

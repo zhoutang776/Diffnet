@@ -29,9 +29,7 @@ diffnet = function(X, Y, lambdas=NULL, lambda.min.ratio = NULL, nlambda = NULL, 
   \item{verbose}{if verbose equals TRUE, it will return the covergent information}
   \item{Delta.init}{the initial solution of the algorithm.}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \value{
 An object with S3 class "diffnet" is returned:
 \item{method}{
@@ -78,28 +76,50 @@ The score of each solution under "aic" or "bic" selection criterion
 }
 
 \references{
-%% ~put references to the literature/web site here ~
+Tang, Zhou, Zhangsheng Yu, and Cheng Wang. "A fast iterative algorithm for high-dimensional differential network." Computational Statistics 35, no. 1 (2020): 95-109.
 }
 \author{
 Zhou Tang, Zhangsheng Yu, Cheng Wang
 }
-\note{
-%%  ~~further notes~~
-}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 rm(list = ls())
 library(diffnet)
-data(spam)
-spam = diffnet.npn(spam)
-nonspam = diffnet.npn(nonspam)
-fit.lasso = diffnet(spam, nonspam, penalty = "lasso", nlambda = 100, lambda.min.ratio = 0.1, correlation = T)
-fit.lasso = diffnet.select(fit.lasso, tuning = "bic")
+set.seed(123)
+library('MASS')
+library('Matrix')
+library('diffnet')
+## ---------------------------- preprocess ------------------------------------
+n_X = 100; n_Y = n_X;
+p_X = 100; p_Y = p_X;
+nlambda = 50
+tuning = "none"
+case = "case1"
+stop.tol = 1e-5
+perturb = FALSE
+correlation = FALSE
+max.iter = 800
+lambda.min.ratio = 0.5
+
+# ------------ data generating -----------------
+data = diffnet.case(n=n_X, p=p_X, method = case)
+X = data$X
+Y = data$Y
+diff.Omega = data$diff.Omega
+print(sum(diff.Omega!=0))
+
+start = proc.time()[3]
+result = diffnet(
+    X, Y, verbose = FALSE, nlambda = nlambda, max.iter = max.iter,
+    lambda.min.ratio = lambda.min.ratio, stop.tol=stop.tol, method = "lasso",
+    perturb =perturb, correlation = correlation
+)
+elapse = proc.time()[3] - start
+
+print(result$path[[50]][1:5,1:5])
+
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
