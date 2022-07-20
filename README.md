@@ -16,7 +16,7 @@ What things you need to install the software and how to install them. The key fu
 
 ## Install Diffnet
 
-### Install from github
+### Install from Github
 
     devtools::install_github("zhoutang776/Diffnet")
     
